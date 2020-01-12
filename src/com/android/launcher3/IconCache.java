@@ -677,7 +677,7 @@ public class IconCache {
                     }
                     Bitmap icon = LauncherIcons.createBadgedIconBitmap(
                          iconDrawable, user, mContext, appInfo.targetSdkVersion);
-                    Bitmap lowResIcon =  generateLowResIcon(icon, mPackageBgColor);
+		    Bitmap lowResIcon =  generateLowResIcon(icon);
                     entry.title = appInfo.loadLabel(mPackageManager);
                     entry.contentDescription = mUserManager.getBadgedLabelForUser(entry.title, user);
                     entry.icon = useLowResIcon ? lowResIcon : icon;
